@@ -93,3 +93,26 @@ nav a:hover::after {
 .card {
   background: rgba(255,255,255,0.05);
   border-radius:
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.search-box input {
+  width: 60%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(56,189,248,0.3);
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+}
