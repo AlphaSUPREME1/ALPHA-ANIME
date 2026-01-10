@@ -1,70 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Alpha Anime – Ultimate Anime Hub</title>
-<meta name="description" content="Alpha Anime is your hub for anime discovery, reviews, and official watching links.">
-<link rel="stylesheet" href="style.css">
+<title>Alpha Anime</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <h1>Alpha Anime</h1>
-  <div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search anime...">
+<div class="nav">
+  <div class="logo">Alpha Anime</div>
+  <input class="search" placeholder="Search anime...">
 </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="anime.html">Anime</a>
-  </nav>
-</header>
 
-<section class="hero">
-  <h2>Discover the World of Anime</h2>
-  <p>Find anime, read about it, and watch from official sources.</p>
-</section>
+<div class="hero">
+  <h1>Attack on Titan</h1>
+</div>
 
-<section class="anime-grid">
-  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/13/17405.jpg" alt="Naruto">
-    <h3>Naruto</h3>
-    <a href="naruto.html">View</a>
+<div class="row">
+  <h2>Popular Anime</h2>
+  <div class="row-content">
+    <a href="aot.html" class="card">
+      <img src="images/aot-cover.jpg">
+    </a>
   </div>
-
-  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" alt="One Piece">
-    <h3>One Piece</h3>
-    <a href="onepiece.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Attack on Titan">
-    <h3>Attack on Titan</h3>
-    <a href="aot.html">View</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Alpha Anime</p>
-</footer>
-  
-<script>
-const searchInput = document.getElementById("searchInput");
-const cards = document.querySelectorAll(".card");
-
-searchInput.addEventListener("keyup", function () {
-  const value = searchInput.value.toLowerCase();
-
-  cards.forEach(card => {
-    const title = card.querySelector("h3").textContent.toLowerCase();
-    if (title.includes(value)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-});
-</script>
+</div>
 
 </body>
 </html>
