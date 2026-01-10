@@ -5,56 +5,38 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header class="top-bar">
-    <div class="logo">Alpha Anime</div>
-    <input type="text" id="searchBox" placeholder="Search anime...">
+<header class="header">
+  <div class="logo">Alpha Anime</div>
+  <input type="search" id="siteSearch" placeholder="Search anime...">
 </header>
 
-<section class="hero">
-    <h1>Attack on Titan</h1>
-    <p>Humanity fights for survival against giant Titans.</p>
-</section>
+<section class="anime-section">
+<h2>Popular Anime</h2>
 
-<section class="section">
-    <h2>Popular Anime</h2>
+<div class="anime-list" id="animeList">
 
-    <div class="anime-grid">
+<div class="anime-card">
+<a href="aot.html">
+<img src="images/aot.jpg">
+<div class="anime-info">
+<h3>Attack on Titan</h3>
+<p>Action / Drama</p>
+</div>
+</a>
+</div>
 
-        <a href="aot.html" class="anime-card">
-            <img src="images/aot.jpg">
-            <div class="anime-title">Attack on Titan</div>
-        </a>
-
-        <a href="#" class="anime-card">
-            <img src="images/naruto.jpg">
-            <div class="anime-title">Naruto</div>
-        </a>
-
-        <a href="#" class="anime-card">
-            <img src="images/onepiece.jpg">
-            <div class="anime-title">One Piece</div>
-        </a>
-
-        <a href="#" class="anime-card">
-            <img src="images/demonslayer.jpg">
-            <div class="anime-title">Demon Slayer</div>
-        </a>
-
-    </div>
+</div>
 </section>
 
 <script>
-document.getElementById("searchBox").addEventListener("keyup", function() {
-    let value = this.value.toLowerCase();
-    let cards = document.querySelectorAll(".anime-card");
-    cards.forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
-    });
+document.getElementById("siteSearch").addEventListener("input", function() {
+  let value = this.value.toLowerCase();
+  document.querySelectorAll(".anime-card").forEach(card => {
+    let title = card.innerText.toLowerCase();
+    card.style.display = title.includes(value) ? "block" : "none";
+  });
 });
 </script>
-
 </body>
-
 </html>
 
