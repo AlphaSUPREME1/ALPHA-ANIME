@@ -6,24 +6,55 @@
 </head>
 <body>
 
-<div class="nav">
-  <div class="logo">Alpha Anime</div>
-  <input class="search" placeholder="Search anime...">
-</div>
+<header class="top-bar">
+    <div class="logo">Alpha Anime</div>
+    <input type="text" id="searchBox" placeholder="Search anime...">
+</header>
 
-<div class="hero">
-  <h1>Attack on Titan</h1>
-</div>
+<section class="hero">
+    <h1>Attack on Titan</h1>
+    <p>Humanity fights for survival against giant Titans.</p>
+</section>
 
-<div class="row">
-  <h2>Popular Anime</h2>
-  <div class="row-content">
-    <a href="aot.html" class="card">
-      <img src="images/aot-cover.jpg">
-    </a>
-  </div>
-</div>
+<section class="section">
+    <h2>Popular Anime</h2>
+
+    <div class="anime-grid">
+
+        <a href="aot.html" class="anime-card">
+            <img src="images/aot.jpg">
+            <div class="anime-title">Attack on Titan</div>
+        </a>
+
+        <a href="#" class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Naruto_cover.jpg">
+            <div class="anime-title">Naruto</div>
+        </a>
+
+        <a href="#" class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/One_Piece,_Volume_61_Cover_%28Japanese%29.jpg">
+            <div class="anime-title">One Piece</div>
+        </a>
+
+        <a href="#" class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/5a/Demon_Slayer_Kimetsu_no_Yaiba_volume_1_cover.jpg">
+            <div class="anime-title">Demon Slayer</div>
+        </a>
+
+    </div>
+</section>
+
+<script>
+document.getElementById("searchBox").addEventListener("keyup", function() {
+    let value = this.value.toLowerCase();
+    let cards = document.querySelectorAll(".anime-card");
+    cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
+    });
+});
+</script>
 
 </body>
+
 </html>
 
